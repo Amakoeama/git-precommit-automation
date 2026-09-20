@@ -1,0 +1,22 @@
+#!/bin/bash
+
+echo "Running Flake8..."
+.venv/bin/flake8 src tests
+
+if [ $? -ne 0 ]; then
+    echo "Flake8 failed. Commit blocked."
+    exit 1
+fi
+
+echo "Running PyTest..."
+.venv/bin/python -m pytest -q
+
+if [ $? -ne 0 ]; then
+    echo "Tests failed. Commit blocked."
+    exit 1
+fi
+
+echo "All pre-commit checks passed."
+exit 0
+
+
