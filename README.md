@@ -1,6 +1,8 @@
 
 # Local Commit-Stage Automation with Git Hooks
 
+![Python CI Pipeline](https://github.com/Amakoeama/git-precommit-automation/actions/workflows/ci.yml/badge.svg)
+
 #--- Overview ---
 
 This project demonstrates local commit-stage automation using a Git pre-commit hook. The hook automatically runs code quality checks before Git allows a commit to be completed.
