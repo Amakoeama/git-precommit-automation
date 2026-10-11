@@ -1,0 +1,45 @@
+/* ---  Mini Project 1.4 — CI Quality Gate Report --- */
+
+body {
+    background-color: #f4f7fb;
+    color: #243247;
+}
+
+h1 {
+    color: #17365d;
+    font-weight: 700;
+}
+
+table {
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+table thead {
+    background-color: #17365d;
+    color: #ffffff;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #eaf3f7;
+}
+
+table tbody tr:hover {
+    background-color: #d9f1ee;
+}
+
+a {
+    color: #087e8b;
+}
+
+.total {
+    color: #087443;
+    font-weight: bold;
+}
+
+/*--- To improve readability of table headers ---*/
+table thead th,
+table thead th a,
+table thead th span {
+    color: #ffffff !important;
+}

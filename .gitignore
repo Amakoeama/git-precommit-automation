@@ -2,3 +2,9 @@
 __pycache__/
 .pytest_cache/
 *.pyc
+
+#--- Generated test coverage files ---
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
