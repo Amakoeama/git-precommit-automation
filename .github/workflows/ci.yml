@@ -39,7 +39,7 @@ jobs:
       - name: Build application
         run: python -m compileall src
       - name: Scan dependencies for critical vulnerabilities
-        uses: aquasecurity/trivy-action@0.33.1
+        uses: aquasecurity/trivy-action@0.35.0
         with:
           scan-type: 'fs'
           scan-ref: '.'
