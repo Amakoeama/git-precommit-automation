@@ -38,6 +38,15 @@ jobs:
         run: python -m pytest -v --cov=src --cov-report=term-missing --cov-report=html:htmlcov --cov-report=xml:coverage.xml --cov-fail-under=80
       - name: Build application
         run: python -m compileall src
+      - name: Scan dependencies for critical vulnerabilities
+        uses: aquasecurity/trivy-action@0.33.1
+        with:
+          scan-type: 'fs'
+          scan-ref: '.'
+          scanners: 'vuln'
+          severity: 'CRITICAL'
+          exit-code: '1'
+          format: 'table'
 
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@d209202bc7d53ff1cc128f7f907dac145c9d6ae9 # v8.3.0
