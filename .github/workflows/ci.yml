@@ -43,4 +43,4 @@ jobs:
         run: python -m pytest -v
 
       - name: Confirm successful build
-        run: echo "Application build and tests completed successfully."                                                                run: echo "Application build and tests completed successfully."
+        run: echo 'Application build and tests completed successfully.'
